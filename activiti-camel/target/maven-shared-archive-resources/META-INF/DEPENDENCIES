@@ -1,0 +1,111 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Apache ServiceMix
+
+
+From: 'Alfresco' (http://www.alfresco.com)
+  - Activiti - BPMN Converter (http://activiti.org/modules/activiti-bpmn-converter) org.activiti:activiti-bpmn-converter:jar:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Activiti - BPMN Model (http://activiti.org/modules/activiti-bpmn-model) org.activiti:activiti-bpmn-model:jar:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Activiti - Camel (http://activiti.org/activiti-camel) org.activiti:activiti-camel:bundle:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Activiti - Engine (http://activiti.org/modules/activiti-engine) org.activiti:activiti-engine:jar:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Activiti - Image Generator (http://activiti.org/modules/activiti-image-generator) org.activiti:activiti-image-generator:jar:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Activiti - Process Validation (http://activiti.org/modules/activiti-process-validation) org.activiti:activiti-process-validation:jar:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+  - Activiti - Spring (http://activiti.org/activiti-spring) org.activiti:activiti-spring:jar:5.16.4
+    License: Apache v2  (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+From: 'an unknown organization'
+  - AOP alliance (http://aopalliance.sourceforge.net) aopalliance:aopalliance:jar:1.0
+    License: Public Domain 
+  - JavaBeans Activation Framework (JAF) (http://java.sun.com/products/javabeans/jaf/index.jsp) javax.activation:activation:jar:1.1
+    License: Common Development and Distribution License (CDDL) v1.0  (https://glassfish.dev.java.net/public/CDDLv1.0.html)
+  - JavaMail API (https://glassfish.dev.java.net/javaee5/mail/) javax.mail:mail:jar:1.4.1
+    License: Common Development and Distribution License (CDDL) v1.0  (https://glassfish.dev.java.net/public/CDDLv1.0.html)
+  - jsr173_api  javax.xml.bind:jsr173_api:jar:1.0
+
+  - PostgreSQL JDBC Driver (http://jdbc.postgresql.org) org.postgresql:postgresql:jar:9.4-1201-jdbc41
+    License: The PostgreSQL License  (http://www.postgresql.org/about/licence/)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://wiki.fasterxml.com/JacksonHome) com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)    License: GNU Lesser General Public License, Version 2.1  (http://www.gnu.org/licenses/lgpl-2.1.html)
+  - Jackson-core (http://wiki.fasterxml.com/JacksonHome) com.fasterxml.jackson.core:jackson-core:jar:2.2.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)    License: GNU Lesser General Public License, Version 2.1  (http://www.gnu.org/licenses/lgpl-2.1.html)
+  - jackson-databind (http://wiki.fasterxml.com/JacksonHome) com.fasterxml.jackson.core:jackson-databind:jar:2.2.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)    License: GNU Lesser General Public License, Version 2.1  (http://www.gnu.org/licenses/lgpl-2.1.html)
+
+From: 'Joda.org' (http://www.joda.org)
+  - Joda time (http://joda-time.sourceforge.net) joda-time:joda-time:jar:2.1
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'MyBatis.org' (http://www.mybatis.org/)
+  - MyBatis (http://www.mybatis.org/core/) org.mybatis:mybatis:jar:3.2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Oracle Corporation' (http://www.oracle.com/)
+  - istack common utility code runtime (http://java.net/istack-commons/istack-commons-runtime/) com.sun.istack:istack-commons-runtime:jar:2.16
+    License: CDDL 1.1  (https://glassfish.java.net/public/CDDL+GPL_1_1.html)    License: GPL2 w/ CPE  (https://glassfish.java.net/public/CDDL+GPL_1_1.html)
+  - JAXB CORE (http://jaxb.java.net/) com.sun.xml.bind:jaxb-core:jar:2.2.7
+    License: CDDL 1.1  (https://glassfish.java.net/public/CDDL+GPL_1_1.html)    License: GPL2 w/ CPE  (https://glassfish.java.net/public/CDDL+GPL_1_1.html)
+
+From: 'Oracle Corpration' (http://www.oracle.com)
+  - fastinfoset (http://fi.java.net) com.sun.xml.fastinfoset:FastInfoset:jar:1.2.12
+    License: Apache License, Version 2.0  (http://www.opensource.org/licenses/apache2.0.php)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - JCL 1.1.1 implemented over SLF4J (http://www.slf4j.org) org.slf4j:jcl-over-slf4j:jar:1.7.6
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+  - SLF4J API Module (http://www.slf4j.org/slf4j-api) org.slf4j:slf4j-api:jar:1.6.6:compile
+    License: MIT style  (http://www.slf4j.org/license.html)
+
+From: 'SpringSource' (http://springsource.org/spring-framework)
+  - Spring AOP (https://github.com/SpringSource/spring-framework) org.springframework:spring-aop:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Beans (https://github.com/SpringSource/spring-framework) org.springframework:spring-beans:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Context (https://github.com/SpringSource/spring-framework) org.springframework:spring-context:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Core (https://github.com/SpringSource/spring-framework) org.springframework:spring-core:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Expression Language (SpEL) (https://github.com/SpringSource/spring-framework) org.springframework:spring-expression:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring JDBC (https://github.com/SpringSource/spring-framework) org.springframework:spring-jdbc:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Object/Relational Mapping (https://github.com/SpringSource/spring-framework) org.springframework:spring-orm:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Transaction (https://github.com/SpringSource/spring-framework) org.springframework:spring-tx:jar:3.2.11.RELEASE
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Sun Microsystems' (http://www.sun.com/)
+  - Sun JAXB Reference Implementation Runtime (http://jaxb.java.net/jaxb-impl) com.sun.xml.bind:jaxb-impl:jar:2.2.7:compile
+    License: COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0  (http://www.sun.com/cddl/cddl.html)
+  - Java Architecture for XML Binding (JAXB API) (http://jaxb.java.net/jaxb-api) javax.xml.bind:jaxb-api:jar:2.2.7:compile
+    License: COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0  (http://www.sun.com/cddl/cddl.html)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Commons DBCP (http://commons.apache.org/dbcp/commons-dbcp) commons-dbcp:commons-dbcp:jar:1.4:compile
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Logging (http://commons.apache.org/logging) commons-logging:commons-logging:jar:1.1.3:compile
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Pool (http://commons.apache.org/pool) commons-pool:commons-pool:jar:1.6:compile
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Camel :: Core (http://camel.apache.org/camel-parent/camel-core/camel-core) org.apache.camel:camel-core:jar:2.14.1:compile
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Camel :: Spring (http://camel.apache.org/camel-parent/components/camel-spring) org.apache.camel:camel-spring:bundle:2.14.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Email (http://commons.apache.org/email/) org.apache.commons:commons-email:jar:1.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Commons Lang (http://commons.apache.org/proper/commons-lang/) org.apache.commons:commons-lang3:jar:3.3.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
