@@ -50,6 +50,7 @@ public class ViolationController {
 				"Thu_Apr__2_09-26-55_2015.licenseplate.jpg", "กรุงเทพมหานคร",
 				"Honda", "White", "SUV", "UnEvaluated", "2015-04-02 09:26:55",
 				"Sutthisan");
+		violation.setRecognizedLicenseNumber("ฎท 9897");
 		return new ResponseEntity<Violation>(violation, HttpStatus.OK);
 	}
 //
