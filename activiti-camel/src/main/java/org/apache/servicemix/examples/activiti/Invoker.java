@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.Map;
 
+import org.apache.servicemix.examples.domain.License;
 import org.apache.servicemix.examples.domain.Ticket;
 import org.apache.servicemix.examples.domain.Violation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import com.itextpdf.text.Document;
@@ -19,11 +21,18 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 public class Invoker {
 	private final Logger logger = LoggerFactory.getLogger(Invoker.class);
+	private static String url = "http://localhost:8080/sad_spring_maven_restful/";
 
 	public void validateViolationData(Map map) {
+		RestTemplate restTemplate = new RestTemplate();
+		Violation violation = restTemplate.getForObject(url + "violations/" + map.get("violationId"), Violation.class);
 		
-		map.put("isValid", true);
-//		map.put("isValid", false);
+		License license = restTemplate.getForObject(url + "licenses/search/" + , License.class);
+		if (license.getNumber().equals("NULL")) {
+			map.put("isValid", false);
+		} else {
+			map.put("isValid", true);
+		}
 	}
 	
 	public void createTicket(Map map) {

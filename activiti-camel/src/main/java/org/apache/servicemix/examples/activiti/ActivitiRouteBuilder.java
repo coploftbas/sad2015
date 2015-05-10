@@ -117,7 +117,7 @@ public class ActivitiRouteBuilder extends RouteBuilder {
                                        @Simple("${date:now:yyyy-MM-dd kk:mm:ss}") String timestamp) throws JAXBException, IOException {
             Map<String, Object> variables = new HashMap<String, Object>();
             
-            variables.put("id", violationId);
+            variables.put("violationId", violationId);
             variables.put("filename", filename);
             variables.put("timestamp", timestamp);
             return variables;
