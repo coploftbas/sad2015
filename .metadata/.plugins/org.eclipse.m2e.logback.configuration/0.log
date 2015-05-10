@@ -1,0 +1,22 @@
+2015-05-10 10:06:37,436 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.apache.servicemix.examples:activiti-camel:5.4.0 @ /home/coploftbas/sad2015/activiti-camel/pom.xml.
+2015-05-10 10:06:37,881 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /activiti-camel/src/main/java
+2015-05-10 10:06:37,882 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /activiti-camel/src/main/resources
+2015-05-10 10:06:37,882 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /activiti-camel/src/test/java
+2015-05-10 10:06:37,993 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 2 sec
+2015-05-10 10:06:38,766 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.apache.servicemix.examples:activiti-camel:5.4.0 @ /home/coploftbas/sad2015/activiti-camel/pom.xml.
+2015-05-10 10:06:39,579 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.apache.servicemix.examples:activiti-camel:5.4.0 @ /home/coploftbas/sad2015/activiti-camel/pom.xml.
+2015-05-10 10:06:39,860 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-10 10:06:39,864 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-05-10 10:06:39,871 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-10 10:06:39,871 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/coploftbas/sad2015/activiti-camel/src/test/resources
+2015-05-10 10:06:43,359 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using DEFAULT lifecycle mapping for MavenProject: org.apache.servicemix.examples:activiti-camel:5.4.0 @ /home/coploftbas/sad2015/activiti-camel/pom.xml.
+2015-05-10 10:06:44,532 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-10 10:06:44,534 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-05-10 10:06:44,535 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-10 10:06:44,535 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/coploftbas/sad2015/activiti-camel/src/test/resources
+2015-05-10 10:07:17,397 [Worker-2] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/coploftbas/sad2015/activiti-camel
+2015-05-10 10:07:17,397 [Worker-2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B install
+2015-05-10 10:07:23,859 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-10 10:07:23,863 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2015-05-10 10:07:23,864 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-10 10:07:23,865 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/coploftbas/sad2015/activiti-camel/src/test/resources
