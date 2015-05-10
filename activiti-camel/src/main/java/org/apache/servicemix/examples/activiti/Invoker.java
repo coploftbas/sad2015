@@ -60,11 +60,11 @@ public class Invoker {
 
 		PdfWriter.getInstance(
 				document,
-				new FileOutputStream("[id" + ticket.getId() + "]_"
-						+ ticket.getLicense().getNumber() + "_"
-						+ ticket.getLicense().getOwnerName() + " ("
-						+ ticket.getIssuedDate() + ").pdf"));
-		
+				new FileOutputStream("[" + ticket.getId() + "]-["
+						+ ticket.getIssuedDate() + "]-["
+						+ ticket.getLicense().getNumber() + "]-["
+						+ ticket.getLicense().getOwnerName() + "].pdf"));
+
 		Image image = Image.getInstance("police.png");
 		image.scaleAbsolute(150f, 150f);
 
