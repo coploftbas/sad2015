@@ -20,6 +20,7 @@ public class Violation implements Serializable {
 	private String vehicleBrand;
 	private String vehicleColor;
 	private String vehicleType;
+	private String recognizedLicenseNumber;
 
 	// voilation details
 	private String violationStatus;
@@ -142,6 +143,14 @@ public class Violation implements Serializable {
 		this.vehicleType = vehicleType;
 	}
 
+	public String getRecognizedLicenseNumber() {
+		return recognizedLicenseNumber;
+	}
+
+	public void setRecognizedLicenseNumber(String recognizedLicenseNumber) {
+		this.recognizedLicenseNumber = recognizedLicenseNumber;
+	}
+	
 	public String getViolationStatus() {
 		return violationStatus;
 	}
