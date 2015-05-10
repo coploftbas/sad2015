@@ -86,7 +86,6 @@ public class ActivitiRouteBuilder extends RouteBuilder {
      * A few helper methods used for routing
      */
     public static final class Helper {
-
         /*
          * This method will extract information from the Exchange (using Camel annotations) and put them in a
          * Map that will be used for setting up the process' variables.

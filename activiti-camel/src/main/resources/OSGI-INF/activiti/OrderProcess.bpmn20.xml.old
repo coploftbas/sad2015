@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+
+    <process id="OrderProcess" isExecutable="true">
+
+		<!--<startEvent id="start" activiti:initiator="initiator" />-->
+		<startEvent id="start" />
+
+        <sequenceFlow id="flow1" sourceRef="start" targetRef="processOrder"/>
+        
+        <userTask id="processOrder" name="[SAD2015] Process Order">
+			<documentation>
+				Please process the order.
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>accountancy</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		
+        <!--<serviceTask id="processOrder" activiti:delegateExpression="${camel}"/>-->
+
+        <!--<sequenceFlow id="flow2" sourceRef="processOrder" targetRef="receiveDelivery"/>-->
+        <sequenceFlow id="flow2" sourceRef="processOrder" targetRef="end"/>
+        
+        <!--
+        <userTask id="receiveDelivery" name="[SAD2015 : 2] Write monthly financial report" >
+			<documentation>
+				[SAD2015 : 2] Write monthly financial report for publication to shareholders.
+			</documentation>
+			<potentialOwner>
+				<resourceAssignmentExpression>
+					<formalExpression>accountancy</formalExpression>
+				</resourceAssignmentExpression>
+			</potentialOwner>
+		</userTask>
+		-->
+        <!--<receiveTask id="receiveDelivery" name="Wait for Delivery" />-->
+
+		<!--
+        <sequenceFlow id="flow3" sourceRef="receiveDelivery" targetRef="processDelivery"/>
+        <serviceTask id="processDelivery" activiti:delegateExpression="${camel}"/>
+
+        <sequenceFlow id="flow4" sourceRef="processDelivery" targetRef="end"/>
+        -->
+
+        <endEvent id="end"/>
+
+    </process>
+</definitions>
