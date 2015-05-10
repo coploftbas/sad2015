@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.apache.servicemix.examples.domain.Ticket;
+import org.apache.servicemix.examples.domain.Violation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestTemplate;
@@ -18,35 +19,9 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class Invoker {
 	private final Logger logger = LoggerFactory.getLogger(Invoker.class);
 
-	public void invokeProcessOrder() {
-		// ProcessEngine processEngine;
-		// RepositoryService repositoryService;
-		// RuntimeService runtimeService;
-		// Deployment deployment;
-		// TaskService taskService;
-		//
-		//
-		// // This looks for activiti.cfg.xml in the classpath.
-		// processEngine = ProcessEngines.getDefaultProcessEngine();
-		//
-		// // Get Activiti services
-		// repositoryService = processEngine.getRepositoryService();
-		// runtimeService = processEngine.getRuntimeService();
-		//
-		// // Deploy the process definition
-		// deployment = repositoryService.createDeployment()
-		// .addClasspathResource("OSGI-INF/activiti/OrderProcess.bpmn20.xml").deploy();
-		//
-		// taskService = processEngine.getTaskService();
-		//
-		// ProcessInstance processInstance =
-		// runtimeService.startProcessInstanceByKey("OrderProcess");
-
-		logger.info("=======> Inside invokeProcessOrder()");
-	}
-	
-	private void validateViolationData(String violationData) {
-		logger.info(violationData);
+	public void validateViolationData(String data) {
+		
+		logger.error(data);
 	}
 
 	public void pdfGenerator(Ticket ticket) throws DocumentException,

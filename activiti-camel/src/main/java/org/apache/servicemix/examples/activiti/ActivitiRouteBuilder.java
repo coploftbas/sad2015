@@ -16,17 +16,23 @@
  */
 package org.apache.servicemix.examples.activiti;
 
+import static org.activiti.camel.ActivitiProducer.PROCESS_KEY_PROPERTY;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.xml.bind.JAXBException;
+
 import org.apache.camel.Body;
 import org.apache.camel.Exchange;
 import org.apache.camel.Handler;
 import org.apache.camel.Header;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.language.Simple;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.activiti.camel.ActivitiProducer.PROCESS_KEY_PROPERTY;
+import org.apache.servicemix.examples.domain.Violation;
 
 /**
  * Camel routes that interact with the business process defined in the
@@ -46,7 +52,11 @@ public class ActivitiRouteBuilder extends RouteBuilder {
     
         from("direct:validateViolationData")
         	.bean(Invoker.class, "validateViolationData(${body})")
-        	.log("The violation data has been validated");
+        	.log("The violation data has been validated")
+        	.to("direct:createTicket");
+        	
+        from("direct:createTicket")
+        	.log("The ticket has been created");
 
         /*
          * This route will start a new OrderProcess instance.  Using the PROCESS_KEY_PROPERTY, we are assigning a
@@ -97,12 +107,13 @@ public class ActivitiRouteBuilder extends RouteBuilder {
          * Map that will be used for setting up the process' variables.
          */
         @Handler
-        public Map getProcessVariables(@Body String body,
+        public Map getProcessVariables(@Body String violationId,
                                        @Header(Exchange.FILE_NAME) String filename,
-                                       @Simple("${date:now:yyyy-MM-dd kk:mm:ss}") String timestamp) {
+                                       @Simple("${date:now:yyyy-MM-dd kk:mm:ss}") String timestamp) throws JAXBException, IOException {
             Map<String, Object> variables = new HashMap<String, Object>();
-            variables.put("message", body);
-            variables.put("orderid", filename);
+            
+            variables.put("id", violationId);
+            variables.put("filename", filename);
             variables.put("timestamp", timestamp);
             return variables;
         }
