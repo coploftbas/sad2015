@@ -1,10 +1,6 @@
 package org.apache.servicemix.examples.domain;
 
-import java.util.List;
-import java.util.Set;
-
 public class License {
-
 	private int id;
 	private String number;
 	private String province;
@@ -13,15 +9,25 @@ public class License {
 	private String vehicleType;
 	private String ownerName;
 
-	//private List<Ticket> tickets;
+	public License() {
+		super();
+	}
 
-//	public List<Ticket> getTickets() {
-//		return tickets;
-//	}
-//
-//	public void setTickets(List<Ticket> tickets) {
-//		this.tickets = tickets;
-//	}
+	public License(String owner, String number, String province,
+			String vehicleColor, String vehicleBrand, String vehicleType) {
+		super();
+		this.ownerName = owner;
+		this.number = number;
+		this.province = province;
+		this.vehicleColor = vehicleColor;
+		this.vehicleBrand = vehicleBrand;
+		this.vehicleType = vehicleType;
+	}
+	
+	@Override
+	public String toString() {
+		return id + " " + number + " " + province + " " + vehicleColor + " " + vehicleBrand + " " + vehicleType + " " + ownerName;
+	}
 
 	public String getProvince() {
 		return province;
@@ -78,25 +84,4 @@ public class License {
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	public License() {
-		super();
-	}
-
-	public License(String owner, String number, String province,
-			String vehicleColor, String vehicleBrand, String vehicleType) {
-		super();
-		this.ownerName = owner;
-		this.number = number;
-		this.province = province;
-		this.vehicleColor = vehicleColor;
-		this.vehicleBrand = vehicleBrand;
-		this.vehicleType = vehicleType;
-	}
-	
-	@Override
-	public String toString() {
-		return id + " " + number + " " + province + " " + vehicleColor + " " + vehicleBrand + " " + vehicleType + " " + ownerName;
-	}
-
 }
