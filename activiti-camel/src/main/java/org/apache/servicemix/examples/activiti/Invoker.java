@@ -2,18 +2,19 @@ package org.apache.servicemix.examples.activiti;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
 
-import org.apache.servicemix.examples.domain.License;
 import org.apache.servicemix.examples.domain.Ticket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.client.RestTemplate;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
-
-import org.springframework.web.client.RestTemplate;
 
 public class Invoker {
 	private final Logger logger = LoggerFactory.getLogger(Invoker.class);
@@ -46,7 +47,7 @@ public class Invoker {
 	}
 
 	public void pdfGenerator(Ticket ticket) throws DocumentException,
-			FileNotFoundException {
+			MalformedURLException, IOException {
 
 		Document document = new Document();
 		String url = "";
@@ -63,8 +64,12 @@ public class Invoker {
 						+ ticket.getLicense().getNumber() + "_"
 						+ ticket.getLicense().getOwnerName() + " ("
 						+ ticket.getIssuedDate() + ").pdf"));
+		
+		Image image = Image.getInstance("police.png");
+		image.scaleAbsolute(150f, 150f);
 
 		document.open();
+		document.add(image);
 		document.add(new Paragraph("id: " + ticket.getId() + "\n"
 				+ "Plate number: " + ticket.getLicense().getNumber() + "\n"
 				+ "Owner name: " + ticket.getLicense().getOwnerName() + "\n"
