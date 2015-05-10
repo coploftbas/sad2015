@@ -3,6 +3,7 @@ package org.apache.servicemix.examples.activiti;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Map;
 
 import org.apache.servicemix.examples.domain.Ticket;
 import org.apache.servicemix.examples.domain.Violation;
@@ -19,9 +20,14 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class Invoker {
 	private final Logger logger = LoggerFactory.getLogger(Invoker.class);
 
-	public void validateViolationData(String data) {
+	public void validateViolationData(Map map) {
 		
-		logger.error(data);
+		map.put("isValid", true);
+//		map.put("isValid", false);
+	}
+	
+	public void createTicket(Map map) {
+		
 	}
 
 	public void pdfGenerator(Ticket ticket) throws DocumentException,

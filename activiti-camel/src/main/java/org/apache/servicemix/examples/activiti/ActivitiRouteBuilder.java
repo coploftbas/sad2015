@@ -18,9 +18,7 @@ package org.apache.servicemix.examples.activiti;
 
 import static org.activiti.camel.ActivitiProducer.PROCESS_KEY_PROPERTY;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +30,6 @@ import org.apache.camel.Handler;
 import org.apache.camel.Header;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.language.Simple;
-import org.apache.servicemix.examples.domain.Violation;
 
 /**
  * Camel routes that interact with the business process defined in the
@@ -52,11 +49,19 @@ public class ActivitiRouteBuilder extends RouteBuilder {
     
         from("direct:validateViolationData")
         	.bean(Invoker.class, "validateViolationData(${body})")
-        	.log("The violation data has been validated")
-        	.to("direct:createTicket");
-        	
+        	.log("The violation data has been validated : ${body}")
+        	.choice()
+        	.when().simple("${body[isValid]} == true")
+        		.to("direct:createTicket")
+        	.otherwise()
+                .to("direct:invalid");
+
         from("direct:createTicket")
+        	.bean(Invoker.class, "createTicket(${body})")
         	.log("The ticket has been created");
+        
+        from("direct:invalid")
+        	.log("The case was discarded");
 
         /*
          * This route will start a new OrderProcess instance.  Using the PROCESS_KEY_PROPERTY, we are assigning a
