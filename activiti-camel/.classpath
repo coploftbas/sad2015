@@ -27,11 +27,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/new482/workspace_sad/sad2015/itext/itextpdf-5.5.6.jar"/>
-	<classpathentry kind="lib" path="/home/new482/workspace_sad/sad2015/itext/itextpdf-5.5.6-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/new482/workspace_sad/sad2015/itext/itext-pdfa-5.5.6.jar"/>
-	<classpathentry kind="lib" path="/home/new482/workspace_sad/sad2015/itext/itext-pdfa-5.5.6-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/new482/workspace_sad/sad2015/itext/itext-xtra-5.5.6.jar"/>
-	<classpathentry kind="lib" path="/home/new482/workspace_sad/sad2015/itext/itext-xtra-5.5.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/poom/workspace-sts/sad2015/itext/itextpdf-5.5.6.jar"/>
+	<classpathentry kind="lib" path="/home/poom/workspace-sts/sad2015/itext/itextpdf-5.5.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/poom/workspace-sts/sad2015/itext/itext-pdfa-5.5.6.jar"/>
+	<classpathentry kind="lib" path="/home/poom/workspace-sts/sad2015/itext/itext-pdfa-5.5.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/poom/workspace-sts/sad2015/itext/itext-xtra-5.5.6.jar"/>
+	<classpathentry kind="lib" path="/home/poom/workspace-sts/sad2015/itext/itext-xtra-5.5.6-javadoc.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,6 +1,5 @@
 package org.apache.servicemix.examples.activiti;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -45,6 +44,10 @@ public class Invoker {
 
 		logger.info("=======> Inside invokeProcessOrder()");
 	}
+	
+	private void validateViolationData(String violationData) {
+		logger.info(violationData);
+	}
 
 	public void pdfGenerator(Ticket ticket) throws DocumentException,
 			MalformedURLException, IOException {
@@ -75,6 +78,5 @@ public class Invoker {
 				+ "Owner name: " + ticket.getLicense().getOwnerName() + "\n"
 				+ "Issued Date: " + ticket.getIssuedDate()));
 		document.close();
-
 	}
 }
