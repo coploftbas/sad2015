@@ -43,17 +43,21 @@ public class ActivitiRouteBuilder extends RouteBuilder {
          * business key to our process to allow for easier correlation in later processing steps.  We are also
          * sending a Map containing additional variables to add to the process instance.
          */
-        from("file:var/activiti-camel/order")
+        from("file:var/order")
             .setBody(bean(helper))
             .setProperty(PROCESS_KEY_PROPERTY, simple("file:name"))
-            .to("activiti:OrderProcess")
-            .log("Process to handle incoming order file has been started (process instance id ${body})");
+            //.to("activiti:OrderProcess")
+            .bean(Invoker.class, "invokeProcessOrder")
+            .log("Process to handle incoming order file has been started (process instance id ${body})")
+            .to("direct:adfdsf");
+        
+        from("direct:adfdsf").log("log here");
         
         /*
          * This route will notify a running OrderProcess of an order delivery event.  Here too, we are setting the
          * PROCESS_KEY_PROPERTY to correlate the delivery message with right order process instance.
          */
-        from("file:var/activiti-camel/delivery")
+        from("file:var/delivery")
             .log("Notifying process about delivery for order ${file:name}")
             .setBody(bean(helper))
             .setProperty(PROCESS_KEY_PROPERTY, simple("file:name"))
@@ -71,7 +75,6 @@ public class ActivitiRouteBuilder extends RouteBuilder {
         from("activiti:OrderProcess:processDelivery?copyVariablesToProperties=true")
             .log("Processing delivery for order ${property.orderid} created on ${property.timestamp}")
             .log("  original message: ${property.message}");
-
     }
 
     /*
