@@ -22,12 +22,14 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class Invoker {
 	private final Logger logger = LoggerFactory.getLogger(Invoker.class);
 	private static String url = "http://localhost:8080/sad_spring_maven_restful/";
+	private static int licenseID;
+	private static int violationID;
 
 	public void validateViolationData(Map map) {
 		RestTemplate restTemplate = new RestTemplate();
 		Violation violation = restTemplate.getForObject(url + "violations/" + map.get("violationId"), Violation.class);
 		
-		License license = restTemplate.getForObject(url + "licenses/search/" + , License.class);
+		License license = restTemplate.getForObject(url + "licenses/search/" , License.class);
 		if (license.getNumber().equals("NULL")) {
 			map.put("isValid", false);
 		} else {
@@ -36,14 +38,45 @@ public class Invoker {
 	}
 	
 	public void createTicket(Map map) {
+		RestTemplate restTemplate = new RestTemplate();
 		
+		License license = restTemplate.getForObject(
+				url + "licenses/1",
+				License.class);
+		
+		Violation violation = restTemplate.getForObject(
+				url + "violations/" + map.get("violationId"),
+				Violation.class);
+
+		Ticket ticket = restTemplate.getForObject(
+				url + "tickets",
+				Ticket.class);
+		
+		ticket.setLicense(license);
+		ticket.setViolation(violation);
+	
+		//ticket.getViolation().setId(violationID);
+		//ticket.setExpiryDate("Thu_Apr__2_09-26-55_2015");
+		
+		ticket.setFine(1000);
+		ticket.setId(100);
+		
+		//ticket.setId(20);
+		//ticket.setIssuedBy(issuedBy);
+		//ticket.setIssuedDate("Thu_Apr__2_09-26-55_2015");
+		// System.out.println(violation.getId() + ", " +
+		// violation.getOwnerName());
+		
+		restTemplate.postForEntity(
+				url + "tickets",
+				ticket, Ticket.class);
 	}
 
 	public void pdfGenerator(Ticket ticket) throws DocumentException,
 			MalformedURLException, IOException {
 
 		Document document = new Document();
-		String url = "";
+		
 
 		RestTemplate restTemplate3 = new RestTemplate();
 		// License license = restTemplate3.getForObject(url + "licenses/1",
@@ -66,6 +99,7 @@ public class Invoker {
 		document.add(new Paragraph("id: " + ticket.getId() + "\n"
 				+ "Plate number: " + ticket.getLicense().getNumber() + "\n"
 				+ "Owner name: " + ticket.getLicense().getOwnerName() + "\n"
+				+ "Fine: " + ticket.getFine() + "\n"
 				+ "Issued Date: " + ticket.getIssuedDate()));
 		document.close();
 	}
