@@ -1,10 +1,8 @@
 package org.apache.servicemix.examples.domain;
 
-import java.util.List;
-
 public class Violation {
-
 	private int id;
+	
 	// file names
 	private String beforeViolationImage;
 	private String beforeViolation2Image;
@@ -24,8 +22,7 @@ public class Violation {
 	private String violationTime;
 	private String location;
 
-	private List<Ticket> tickets;
-	
+//	private List<Ticket> tickets;
 //	@OneToOne(mappedBy = "violation", cascade = CascadeType.ALL)
 //	private Ticket ticket;
 //
@@ -37,9 +34,7 @@ public class Violation {
 //		this.ticket = ticket;
 //	}
 
-	public Violation() {
-
-	}
+	public Violation() {}
 
 	public Violation(String beforeViolationImage, String beforeViolation2Image,
 			String afterViolationImage, String afterViolation2Image,

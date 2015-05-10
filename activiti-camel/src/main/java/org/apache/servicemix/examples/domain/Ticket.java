@@ -1,51 +1,41 @@
 package org.apache.servicemix.examples.domain;
 
 public class Ticket {
-
 	private int id;
-	
-	private int fine; 
-	private String issuedBy; 
-	private String issuedDate; 
-	private String expiryDate; 
+
+	private int fine;
+	private String issuedBy;
+	private String issuedDate;
+	private String expiryDate;
 	private String status;
 
 	private License license;
-	
 	private Violation violation;
 
-	public Violation getViolation() {
-		return violation;
-	}
-
-	public void setViolation(Violation violation) {
-		this.violation = violation;
-	}
-
 	public Ticket() {
-
 	}
 
 	public Ticket(License license) {
 		this.license = license;
 	}
 
-	public Ticket(int fine, String issuedBy,String issuedDate,String expiryDate, String status, License li, Violation violation2) {
+	public Ticket(int fine, String issuedBy, String issuedDate,
+			String expiryDate, String status, License license, Violation violation) {
 		this.fine = fine;
 		this.issuedBy = issuedBy;
-		this.issuedDate = issuedDate; 
+		this.issuedDate = issuedDate;
 		this.expiryDate = expiryDate;
 		this.status = status;
-		license = li;
-		violation = violation2;
-	}
-
-	public License getLicense() {
-		return license;
-	}
-
-	public void setLicense(License license) {
 		this.license = license;
+		this.violation = violation;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getFine() {
@@ -88,8 +78,19 @@ public class Ticket {
 		this.status = status;
 	}
 
-	public int getId() {
-		return id;
+	public License getLicense() {
+		return license;
 	}
 
+	public void setLicense(License license) {
+		this.license = license;
+	}
+
+	public Violation getViolation() {
+		return violation;
+	}
+
+	public void setViolation(Violation violation) {
+		this.violation = violation;
+	}
 }
