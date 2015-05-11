@@ -1,10 +1,6 @@
 package org.apache.servicemix.examples.domain;
 
-import java.io.Serializable;
-
-public class Violation implements Serializable {
-	private static final long serialVersionUID = 1L;
-
+public class Violation {
 	private int id;
 	
 	// file names

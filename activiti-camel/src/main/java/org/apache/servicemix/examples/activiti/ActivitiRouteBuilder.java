@@ -30,6 +30,7 @@ import org.apache.camel.Handler;
 import org.apache.camel.Header;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.language.Simple;
+import org.neo4j.cypher.internal.compiler.v2_1.docbuilders.logicalPlanDocBuilder;
 
 /**
  * Camel routes that interact with the business process defined in the
@@ -59,7 +60,7 @@ public class ActivitiRouteBuilder extends RouteBuilder {
         from("direct:createTicket")
         	.bean(Invoker.class, "createTicket(${body})")
         	.log("The ticket has been created");
-        
+
         from("direct:invalid")
         	.log("The case was discarded");
 
